@@ -1,0 +1,30 @@
+product-id: 501
+welcome: hallo
+
+media-path: "Sounds/%s"
+
+init:
+  $modus:=1
+  $counter:=1
+
+scripts:
+  12001:
+  - $seite1==1 ? P(0_Wie_Lara)
+  - $seite1==2 ? $seite1:=3  P(0_Wie_Lara_2)
+  - $seite1==3 ? $seite1:=1  P(seite_1)
+  12002:
+  - $seite2==1 ? $seite2:=2 P(1_Tschuess)
+  - $seite2==2 ? $seite2:=3 P(seite_2_bild)
+  - $seite2==3 ? $seite2:=1 P(seite_2)
+  12003:
+  - $seite3==1 ? $seite3:=2 P(2_Du_findest)
+  - $seite3==2 ? $seite3:=3 P(seite_3_bild)
+  - $seite3==3 ? $seite3:=1 P(seite_3)
+  12004:
+  - $seite4==1 ? $seite4:=2 P(3_Spaeter_stapelt)
+  - $seite4==2 ? $seite4:=3 P(seite_4_bild)
+  - $seite4==3 ? $seite4:=1 P(seite_4)
+  12005:
+  - $seite5==1 ? $seite5:=2 P(3_Spaeter_stapelt)
+  - $seite5==2 ? $seite5:=3 P(seite_5_bild)
+  - $seite5==3 ? $seite5:=1 P(seite_5)

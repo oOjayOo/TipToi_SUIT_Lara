@@ -1,0 +1,95 @@
+product-id: 501
+welcome: hallo
+
+media-path: "Sounds/%s"
+gme-lang: GERMAN
+
+init:
+  $modus:=1
+  $counter:=1
+  # Modus 1: Texte vorlesen
+  # Modus 2: Beschreibung des Bildes
+  # Modus 3: Seite ansagen
+  # Modus 4: Counter hochzählen
+scripts:
+  12192:
+  - $modus==1? $modus:=2 P(bild)
+  - $modus==2? $modus:=3 P(seite_ansagen)
+  - $modus==3? $modus:=4 P(zaehler)
+  - $modus==4? $modus:=1 P(vorlesen)
+  12001:
+  - $modus==1? P(0_Wie_Lara,0_Wie_Lara_2)
+  - $modus==2? P(keine_beschreibung)
+  - $modus==3? P(seite_1)
+  - $modus==4? J(99999)
+  12002:
+  - $modus==1? P(1_Tschuess)
+  - $modus==2? P(seite_2_bild)
+  - $modus==3? P(seite_2)
+  - $modus==4? J(99999)
+  12003:
+  - $modus==1? P(2_Du_findest)
+  - $modus==2? P(seite_3_bild)
+  - $modus==3? P(seite_3)
+  - $modus==4? J(99999)
+  12004:
+  - $modus==1? P(3_Spaeter_stapelt)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_4)
+  - $modus==4? $modus:=1
+  12005:
+  - $modus==1? P(4_Mittagessen,5_Doch_die)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_5)
+  - $modus==4? J(99999)
+  12006:
+  - $modus==1? P(6_Willst_du)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_6)
+  - $modus==4? J(99999)
+  12007:
+  - $modus==1? P(7_Rebecca_schluckt)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_7)
+  - $modus==4? J(99999)
+  12008:
+  - $modus==1? P(8_ihr_duerft)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_8)
+  - $modus==4? J(99999)
+  12009:
+  - $modus==1? P(9_Lara_zieht)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_9)
+  - $modus==4? J(99999)
+  12010:
+  - $modus==1? P(10_die_naechsten)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_10)
+  - $modus==4? J(99999)
+  12011:
+  - $modus==1? P(11_am_Tag)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_11)
+  - $modus==4? J(99999)
+  12012:
+  - $modus==1? P(12_Pass_doch)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_12)
+  - $modus==4? J(99999)
+  12013:
+  - $modus==1? P(13_das_theater)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_13)
+  - $modus==4? J(99999)
+  99999:
+  - $counter+=1 P(count)
+speak:
+- language: de
+  keine_beschreibung: "keine beschreibung vorhanden"
+  vorlesen: "Vorlesemodus"
+  bild: "Bildbeschreibungsmodus"
+  seite_ansagen: "Seiten ansage Modus"
+  zaehler: "Zaehl Modus"
+  count: "$counter"
+

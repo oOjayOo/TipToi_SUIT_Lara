@@ -1,30 +1,80 @@
-product-id: 501
+product-id: 502
 welcome: hallo
 
 media-path: "Sounds/%s"
+gme-lang: GERMAN
 
 init:
   $modus:=1
-  $counter:=1
-
+  $switcher1:=1
+  # Modus 1: Texte vorlesen
+  # Modus 2: Beschreibung des Bildes
+  # Modus 3: Seite ansagen
 scripts:
+  12192:
+  - $modus==1? $modus:=2 P(bildmodus)
+  - $modus==2? $modus:=3 P(seitenzahlmodus)
+  - $modus==3? $modus:=1 P(vorlesemodus)
   12001:
-  - $seite1==1 ? P(0_Wie_Lara)
-  - $seite1==2 ? $seite1:=3  P(0_Wie_Lara_2)
-  - $seite1==3 ? $seite1:=1  P(seite_1)
+  - $modus==1? P(0_Wie_Lara,0_Wie_Lara_2)
+  - $modus==2? P(keine_beschreibung)
+  - $modus==3? P(seite_1)
   12002:
-  - $seite2==1 ? $seite2:=2 P(1_Tschuess)
-  - $seite2==2 ? $seite2:=3 P(seite_2_bild)
-  - $seite2==3 ? $seite2:=1 P(seite_2)
+  - $modus==1? P(1_Tschuess)
+  - $modus==2? P(seite_2_bild)
+  - $modus==3? P(seite_2)
   12003:
-  - $seite3==1 ? $seite3:=2 P(2_Du_findest)
-  - $seite3==2 ? $seite3:=3 P(seite_3_bild)
-  - $seite3==3 ? $seite3:=1 P(seite_3)
+  - $modus==1? P(2_Du_findest)
+  - $modus==2? P(seite_3_bild)
+  - $modus==3? P(seite_3)
   12004:
-  - $seite4==1 ? $seite4:=2 P(3_Spaeter_stapelt)
-  - $seite4==2 ? $seite4:=3 P(seite_4_bild)
-  - $seite4==3 ? $seite4:=1 P(seite_4)
+  - $modus==1? P(3_Spaeter_stapelt)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_4)
   12005:
-  - $seite5==1 ? $seite5:=2 P(3_Spaeter_stapelt)
-  - $seite5==2 ? $seite5:=3 P(seite_5_bild)
-  - $seite5==3 ? $seite5:=1 P(seite_5)
+  - $modus==1? $switcher1==1? $switcher1:=2 P(4_Mittagessen)
+  - $modus==1? $switcher1==2? $switcher1:=1 P(5_Doch_die)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_5)
+  12006:
+  - $modus==1? P(6_Willst_du)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_6)
+  12007:
+  - $modus==1? P(7_Rebecca_schluckt)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_7)
+  12008:
+  - $modus==1? P(8_ihr_duerft)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_8)
+  12009:
+  - $modus==1? P(9_Lara_zieht)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_9)
+  12010:
+  - $modus==1? P(10_die_naechsten)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_10)
+  12011:
+  - $modus==1? P(11_am_Tag)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_11)
+  12012:
+  - $modus==1? P(12_Pass_doch)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_12)
+  12013:
+  - $modus==1? P(13_das_theater)
+  - $modus==2? P(seite_4_bild)
+  - $modus==3? P(seite_13)
+
+speak:
+- language: de
+  keine_beschreibung: "keine beschreibung vorhanden"
+  vorlesen: "Vorlesemodus"
+  bild: "Bildbeschreibungsmodus"
+  seite_ansagen: "Seiten ansage Modus"
+  zaehler: "Zaehl Modus"
+  count: "$counter"
+

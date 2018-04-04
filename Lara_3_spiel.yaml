@@ -1,0 +1,23 @@
+product-id: 503
+welcome: hallo
+
+media-path: "Sounds/%s"
+gme-lang: GERMAN
+
+init:
+  $modus:=1
+  $switcher1:=1
+  # Modus 1: Texte vorlesen
+  # Modus 2: Beschreibung des Bildes
+  # Modus 3: Seite ansagen
+scripts:
+  12001:
+  - P(a_bobbycar)
+  12001:
+  - P(a_rechenschieber)
+  12001:
+  - P(a_schwein)
+  12001:
+  - P(a_skateboard)
+  12001:
+  - P(a_buhne)

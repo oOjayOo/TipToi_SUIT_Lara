@@ -11,7 +11,7 @@ init:
   # Modus 2: Beschreibung des Bildes
   # Modus 3: Seite ansagen
 scripts:
-  12192:
+  10208:
   - $modus==1? $modus:=2 P(bildmodus)
   - $modus==2? $modus:=3 P(seitenzahlmodus)
   - $modus==3? $modus:=1 P(vorlesemodus)
@@ -34,39 +34,39 @@ scripts:
   12005:
   - $modus==1? $switcher1==1? $switcher1:=2 P(4_Mittagessen)
   - $modus==1? $switcher1==2? $switcher1:=1 P(5_Doch_die)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_5_bild)
   - $modus==3? P(seite_5)
   12006:
   - $modus==1? P(6_Willst_du)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_6_bild)
   - $modus==3? P(seite_6)
   12007:
   - $modus==1? P(7_Rebecca_schluckt)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_7_bild)
   - $modus==3? P(seite_7)
   12008:
   - $modus==1? P(8_ihr_duerft)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_8_bild)
   - $modus==3? P(seite_8)
   12009:
   - $modus==1? P(9_Lara_zieht)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_9_bild)
   - $modus==3? P(seite_9)
   12010:
   - $modus==1? P(10_die_naechsten)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_10_bild)
   - $modus==3? P(seite_10)
   12011:
   - $modus==1? P(11_am_Tag)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_11_bild)
   - $modus==3? P(seite_11)
   12012:
   - $modus==1? P(12_Pass_doch)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_12_bild)
   - $modus==3? P(seite_12)
   12013:
   - $modus==1? P(13_das_theater)
-  - $modus==2? P(seite_4_bild)
+  - $modus==2? P(seite_13_bild)
   - $modus==3? P(seite_13)
 
 speak:

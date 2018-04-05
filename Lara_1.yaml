@@ -40,8 +40,8 @@ scripts:
   - $seite04==2 ? $seite04:=3 P(seite_4_bild)
   - $seite04==3 ? $seite04:=1 P(seite_4)
   12005:
-  - $seite05==1 ? $switcher1==1? $seite5:=1 $switcher1:=2 P(4_Mittagessen)
-  - $seite05==1 ? $switcher1==2? $seite5:=2 $switcher1:=1 P(5_Doch_die)
+  - $seite05==1 ? $switcher1==1? $seite05:=1 $switcher1:=2 P(4_Mittagessen)
+  - $seite05==1 ? $switcher1==2? $seite05:=2 $switcher1:=1 P(5_Doch_die)
   - $seite05==2 ? $seite05:=3 P(seite_5_bild)
   - $seite05==3 ? $seite05:=1 P(seite_5)
   12006:

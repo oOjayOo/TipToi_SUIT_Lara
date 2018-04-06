@@ -1,4 +1,4 @@
-product-id: 503
+product-id: 504
 welcome: hallo
 
 media-path: "Sounds/%s"
@@ -7,6 +7,7 @@ gme-lang: GERMAN
 init:
   $aufgabe:=0
   $counter:=0
+  $wuerfel:=0
 
   $buehne1:=0
   $buehne2:=0
@@ -14,15 +15,17 @@ init:
   $buehne4:=0
 
 scripts:
-  12022:
+  10208:
+  - T($wuerfel,5) J(99998)
+  90001:
   - $aufgabe:=1 P(a_bobbycar)
-  12024:
+  90002:
   - $aufgabe:=2 P(a_rechenschieber)
-  12025:
+  90003:
   - $aufgabe:=3 P(a_schwein)
-  12026:
+  90004:
   - $aufgabe:=4 P(a_skateboard)
-  12023:
+  90005:
   - $aufgabe:=5 $buehne1:=0 $buehne2:=0 $buehne3:=0 $buehne4:=0 P(a_buhne)
 
   # Bobbycar
@@ -68,10 +71,14 @@ scripts:
   - $aufgabe!=5? P(falsch)
   99999:
   - $buehne1:=1 $buehne2:=0 $buehne3:=0 $buehne4:=0 $aufgabe:=0
+  99998:
+  - $wuerfel==0? J(90001)
+  - $wuerfel==1? J(90002)
+  - $wuerfel==2? J(90003)
+  - $wuerfel==3? J(90004)
+  - $wuerfel==4? J(90005)
 
   # behandeln der verwendeten Codes
-  10208:
-  - P(falsch)
   12001:
   - P(falsch)
   12002:

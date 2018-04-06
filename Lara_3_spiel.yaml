@@ -5,19 +5,104 @@ media-path: "Sounds/%s"
 gme-lang: GERMAN
 
 init:
-  $modus:=1
-  $switcher1:=1
-  # Modus 1: Texte vorlesen
-  # Modus 2: Beschreibung des Bildes
-  # Modus 3: Seite ansagen
+  $aufgabe:=0
+  $counter:=0
+
+  $buehne1:=0
+  $buehne2:=0
+  $buehne3:=0
+  $buehne4:=0
+
 scripts:
+  12022:
+  - $aufgabe:=1 P(a_bobbycar)
+  12024:
+  - $aufgabe:=2 P(a_rechenschieber)
+  12025:
+  - $aufgabe:=3 P(a_schwein)
+  12026:
+  - $aufgabe:=4 P(a_skateboard)
+  12023:
+  - $aufgabe:=5 $buehne1:=0 $buehne2:=0 $buehne3:=0 $buehne4:=0 P(a_buhne)
+
+  # Bobbycar
+  12027:
+  - $aufgabe==1? $aufgabe:=0 P(richtig)
+  - $aufgabe!=1? P(falsch)
+
+  # Rechenschieber
+  12019:
+  - $aufgabe==2? $aufgabe:=0 P(richtig)
+  - $aufgabe!=2? P(falsch)
+
+  # Schwein
+  12020:
+  - $aufgabe==3? $aufgabe:=0 P(richtig)
+  - $aufgabe!=3? P(falsch)
+
+  # Skadeboard
+  12021:
+  - $aufgabe==4? $aufgabe:=0 P(richtig)
+  - $aufgabe!=4? P(falsch)
+
+  # Bühne
+  12015:
+  - $aufgabe==5? $buehne1==0? $counter<3? $counter+=1 $buehne1:=1 P(weiter)
+  - $aufgabe==5? $buehne1==0? $counter>2? P(allesrichtig) J(99999)
+  - $aufgabe==5? $buehne1!=0? P(schongewaehlt)
+  - $aufgabe!=5? P(falsch)
+  12016:
+  - $aufgabe==5? $buehne2==0? $counter<3? $counter+=1 $buehne2:=1 P(weiter)
+  - $aufgabe==5? $buehne2==0? $counter>2? P(allesrichtig) J(99999)
+  - $aufgabe==5? $buehne2!=0? P(schongewaehlt)
+  - $aufgabe!=5? P(falsch)
+  12017:
+  - $aufgabe==5? $buehne3==0? $counter<3? $counter+=1 $buehne3:=1 P(weiter)
+  - $aufgabe==5? $buehne3==0? $counter>2? P(allesrichtig) J(99999)
+  - $aufgabe==5? $buehne3!=0? P(schongewaehlt)
+  - $aufgabe!=5? P(falsch)
+  12018:
+  - $aufgabe==5? $buehne4==0? $counter<3? $counter+=1 $buehne4:=1 P(weiter)
+  - $aufgabe==5? $buehne4==0? $counter>2? P(allesrichtig) J(99999)
+  - $aufgabe==5? $buehne4!=0? P(schongewaehlt)
+  - $aufgabe!=5? P(falsch)
+  99999:
+  - $buehne1:=1 $buehne2:=0 $buehne3:=0 $buehne4:=0 $aufgabe:=0
+
+  # behandeln der verwendeten Codes
+  10208:
+  - P(falsch)
   12001:
-  - P(a_bobbycar)
-  12001:
-  - P(a_rechenschieber)
-  12001:
-  - P(a_schwein)
-  12001:
-  - P(a_skateboard)
-  12001:
-  - P(a_buhne)
+  - P(falsch)
+  12002:
+  - P(falsch)
+  12003:
+  - P(falsch)
+  12004:
+  - P(falsch)
+  12005:
+  - P(falsch)
+  12006:
+  - P(falsch)
+  12007:
+  - P(falsch)
+  12008:
+  - P(falsch)
+  12009:
+  - P(falsch)
+  12010:
+  - P(falsch)
+  12011:
+  - P(falsch)
+  12012:
+  - P(falsch)
+  12013:
+  - P(falsch)
+
+speak:
+- language: de
+  falsch: "das ist leider falsch, versuch es nochmal"
+  richtig: "sehr gut, richtig, versuch noch eins"
+  weiter: "sehr gut, richtig, es fehlt aber noch etwas"
+  schongewaehlt: "das hattest du schon, versuch es weiter"
+  allesrichtig: "sehr gut, alles richtig, das war es. waehle neu"

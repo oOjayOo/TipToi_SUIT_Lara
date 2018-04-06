@@ -2,14 +2,20 @@
 
 ## Inhalt
 
-* [Was ist das für ein Projekt?](#projekt)
+* [Projektinfo](#projekt)
+* [Was wird benötigt?](#benoetigt)
 * [Ziele](#ziele)
+* [Codebelegung](#belegung)
 
-## Projektinfo? <a name="projekt"></a>
+## Projektinfo <a name="projekt"></a>
 
 Dieses Projekt ensteht in zusammenarbeit mit der Hochschule für Technik und Wirtschft im Modul Spiele‐ und Interaktionstechniken unter der leitung von Prof. Dr. Markus Wacker
 
-## Ziele? <a name="ziele"></a>
+## Was wird benötigt? <a name="benoetigt"></a>
+
+TipToiTool Version 1.8 [https://github.com/entropia/tip-toi-reveng/releases]  
+
+## Ziele <a name="ziele"></a>
 
 **Erweitere das Pixi‐Buch: Wie Lara mit den Fingern sieht**
 
@@ -25,3 +31,38 @@ Dieses Projekt ensteht in zusammenarbeit mit der Hochschule für Technik und Wir
 
 6. Eigene Ideen
 
+## Codebelegung <a name="belegung"></a>
+```
+Aufgabe 1 = 501
+Aufgabe 2 = 502
+
+Aufgabe 3 = 503
+Aufgabe 4 = 504
+
+Beschreibung:
+    Seite 1 = 12001
+    Seite 2 = 12002
+    Seite 3 = 12003
+    Seite 4 = 12004
+    Seite 5 = 12005
+    Seite 6 = 12006
+    Seite 7 = 12007
+    Seite 8 = 12008
+    Seite 9 = 12009
+    Seite 10 = 12010
+    Seite 11 = 12011
+    Seite 12 = 12012
+    Seite 13 = 12013
+
+Suchaufgaben:
+    Bobbycar finden = 12022
+    Bühnebild finden = 12023
+    Rechenschieber finden = 12024
+    Schwein finden = 12025
+    Skadeboard finden = 12026
+    Bobbycar = 12027
+    Bühnebild = 12015,12016,12017,12018
+    Rechenschieber = 12019
+    Schwein = 12020
+    Skadeboard = 12021
+    

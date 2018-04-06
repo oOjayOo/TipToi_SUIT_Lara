@@ -1,0 +1,78 @@
+product-id: 53
+welcome: hallo
+
+media-path: "Sounds/%s"
+gme-lang: GERMAN
+
+init:
+  $seite01:=1
+  $seite02:=1
+  $seite03:=1
+  $seite04:=1
+  $seite05:=1
+  $seite06:=1
+  $seite08:=1
+  $seite07:=1
+  $seite09:=1
+  $seite10:=1
+  $seite11:=1
+  $seite12:=1
+  $seite13:=1
+  $switcher1:=1
+  # Modus 1: Texte vorlesen
+  # Modus 2: Beschreibung des Bildes
+  # Modus 3: Seite ansagen
+scripts:
+  12001:
+  - $seite01==1 ? $seite01:=2 P(0_Wie_Lara)
+  - $seite01==2 ? $seite01:=3 P(0_Wie_Lara_2)
+  - $seite01==3 ? $seite01:=1 P(seite_1)
+  12002:
+  - $seite02==1 ? $seite02:=2 P(1_Tschuess)
+  - $seite02==2 ? $seite02:=3 P(seite_2_bild)
+  - $seite02==3 ? $seite02:=1 P(seite_2)
+  12003:
+  - $seite03==1 ? $seite03:=2 P(2_Du_findest)
+  - $seite03==2 ? $seite03:=3 P(seite_3_bild)
+  - $seite03==3 ? $seite03:=1 P(seite_3)
+  12004:
+  - $seite04==1 ? $seite04:=2 P(3_Spaeter_stapelt)
+  - $seite04==2 ? $seite04:=3 P(seite_4_bild)
+  - $seite04==3 ? $seite04:=1 P(seite_4)
+  12005:
+  - $seite05==1 ? $switcher1==1? $seite5:=1 $switcher1:=2 P(4_Mittagessen)
+  - $seite05==1 ? $switcher1==2? $seite5:=2 $switcher1:=1 P(5_Doch_die)
+  - $seite05==2 ? $seite05:=3 P(seite_5_bild)
+  - $seite05==3 ? $seite05:=1 P(seite_5)
+  12006:
+  - $seite06==1 ? $seite06:=2 P(6_Willst_du)
+  - $seite06==2 ? $seite06:=3 P(seite_6_bild)
+  - $seite06==3 ? $seite06:=1 P(seite_6)
+  12007:
+  - $seite07==1 ? $seite07:=2 P(7_Rebecca_schluckt)
+  - $seite07==2 ? $seite07:=3 P(seite_7_bild)
+  - $seite07==3 ? $seite07:=1 P(seite_7)
+  12008:
+  - $seite08==1 ? $seite08:=2 P(8_ihr_duerft)
+  - $seite08==2 ? $seite08:=3 P(seite_8_bild)
+  - $seite08==3 ? $seite08:=1 P(seite_8)
+  12009:
+  - $seite09==1 ? $seite09:=2 P(9_Lara_zieht)
+  - $seite09==2 ? $seite09:=3 P(seite_9_bild)
+  - $seite09==3 ? $seite09:=1 P(seite_9)
+  12010:
+  - $seite10==1 ? $seite10:=2 P(10_die_naechsten)
+  - $seite10==2 ? $seite10:=3 P(seite_10_bild)
+  - $seite10==3 ? $seite10:=1 P(seite_10)
+  12011:
+  - $seite11==1 ? $seite11:=2 P(11_am_Tag)
+  - $seite11==2 ? $seite11:=3 P(seite_11_bild)
+  - $seite11==3 ? $seite11:=1 P(seite_11)
+  12012:
+  - $seite12==1 ? $seite12:=2 P(12_Pass_doch)
+  - $seite12==2 ? $seite12:=3 P(seite_12_bild)
+  - $seite12==3 ? $seite12:=1 P(seite_12)
+  12013:
+  - $seite13==1 ? $seite13:=2 P(13_das_theater)
+  - $seite13==2 ? $seite13:=3 P(seite_13_bild)
+  - $seite13==3 ? $seite13:=1 P(seite_13)

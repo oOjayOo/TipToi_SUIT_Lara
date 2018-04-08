@@ -35,7 +35,6 @@ TipToiTool Version 1.8 [https://github.com/entropia/tip-toi-reveng/releases]
 ```
 Aufgabe 1 = 501
 Aufgabe 2 = 502
-
 Aufgabe 3 = 503
 Aufgabe 4 = 504
 
@@ -66,3 +65,5 @@ Suchaufgaben:
     Schwein = 12020
     Skadeboard = 12021
     
+Sonstige:
+    Moduswechsel, Zufallsaufgabe = 10208

@@ -1,5 +1,5 @@
 product-id: 504
-welcome: hallo
+welcome: hallozufall
 
 media-path: "Sounds/%s"
 gme-lang: GERMAN
@@ -74,11 +74,11 @@ scripts:
   - $buehne1:=1 $buehne2:=0 $buehne3:=0 $buehne4:=0 $aufgabe:=0
   99998:
   - $oldWuerfeln==$wuerfel? J(10208)
-  - $oldWuerfeln!=$wuerfel? $oldWuerfeln:=$wuerfel $wuerfel==0? J(90001)
-  - $oldWuerfeln!=$wuerfel? $oldWuerfeln:=$wuerfel $wuerfel==1? J(90002)
-  - $oldWuerfeln!=$wuerfel? $oldWuerfeln:=$wuerfel $wuerfel==2? J(90003)
-  - $oldWuerfeln!=$wuerfel? $oldWuerfeln:=$wuerfel $wuerfel==3? J(90004)
-  - $oldWuerfeln!=$wuerfel? $oldWuerfeln:=$wuerfel $wuerfel==4? J(90005)
+  - $oldWuerfeln!=$wuerfel? $wuerfel==0? $oldWuerfeln:=$wuerfel J(90001)
+  - $oldWuerfeln!=$wuerfel? $wuerfel==1? $oldWuerfeln:=$wuerfel J(90002)
+  - $oldWuerfeln!=$wuerfel? $wuerfel==2? $oldWuerfeln:=$wuerfel J(90003)
+  - $oldWuerfeln!=$wuerfel? $wuerfel==3? $oldWuerfeln:=$wuerfel J(90004)
+  - $oldWuerfeln!=$wuerfel? $wuerfel==4? $oldWuerfeln:=$wuerfel J(90005)
 
   # behandeln der verwendeten Codes
   12001:
@@ -107,11 +107,3 @@ scripts:
   - P(falsch)
   12013:
   - P(falsch)
-
-speak:
-- language: de
-  falsch: "das ist leider falsch, versuch es nochmal"
-  richtig: "sehr gut, richtig, versuch noch eins"
-  weiter: "sehr gut, richtig, es fehlt aber noch etwas"
-  schongewaehlt: "das hattest du schon, versuch es weiter"
-  allesrichtig: "sehr gut, alles richtig, das war es. waehle neu"

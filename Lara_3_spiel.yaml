@@ -1,13 +1,13 @@
 product-id: 503
-welcome: hallo
+welcome: hallospiel
 
 media-path: "Sounds/%s"
 gme-lang: GERMAN
 
 init:
   $aufgabe:=0
-  $counter:=0
 
+  $counter:=0
   $buehne1:=0
   $buehne2:=0
   $buehne3:=0
@@ -98,11 +98,3 @@ scripts:
   - P(falsch)
   12013:
   - P(falsch)
-
-speak:
-- language: de
-  falsch: "das ist leider falsch, versuch es nochmal"
-  richtig: "sehr gut, richtig, versuch noch eins"
-  weiter: "sehr gut, richtig, es fehlt aber noch etwas"
-  schongewaehlt: "das hattest du schon, versuch es weiter"
-  allesrichtig: "sehr gut, alles richtig, das war es. waehle neu"

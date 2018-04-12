@@ -5,6 +5,8 @@ media-path: "Sounds/%s"
 gme-lang: GERMAN
 
 init:
+  $alles:=1
+  $aktuell:=1
   $seite01:=1
   $seite02:=1
   $seite03:=1
@@ -23,6 +25,41 @@ init:
   # Modus 2: Beschreibung des Bildes
   # Modus 3: Seite ansagen
 scripts:
+  # für das Vorlesen muss immer wieder ein Code ausgewählt werden
+  10208:
+  - $alles==1 ? $alles:=2 P(0_Wie_Lara,0_Wie_Lara_2)
+  - $alles==2 ? $alles:=3 P(1_Tschuess)
+  - $alles==3 ? $alles:=4 P(2_Du_findest)
+  - $alles==4 ? $alles:=5 P(3_Spaeter_stapelt)
+  - $alles==5 ? $alles:=6 P(4_Mittagessen)
+  - $alles==6 ? $alles:=7 P(5_Doch_die)
+  - $alles==7 ? $alles:=8 P(6_Willst_du)
+  - $alles==8 ? $alles:=9 P(7_Rebecca_schluckt)
+  - $alles==9 ? $alles:=10 P(8_ihr_duerft)
+  - $alles==10 ? $alles:=11 P(9_Lara_zieht)
+  - $alles==11 ? $alles:=12 P(10_die_naechsten)
+  - $alles==12 ? $alles:=13 P(11_am_Tag)
+  - $alles==13 ? $alles:=14 P(12_Pass_doch)
+  - $alles==14 ? $alles:=1 P(13_das_theater)
+  # es wird die ganze Geschicht nacheinander abgespielt
+  10202:
+  - $aktuell==1? J(99999) P(0_Wie_Lara,0_Wie_Lara_2)
+  - $aktuell==2? J(99999) P(1_Tschuess)
+  - $aktuell==3? J(99999) P(2_Du_findest)
+  - $aktuell==4? J(99999) P(3_Spaeter_stapelt)
+  - $aktuell==5? J(99999) P(4_Mittagessen)
+  - $aktuell==6? J(99999) P(5_Doch_die)
+  - $aktuell==7? J(99999) P(6_Willst_du)
+  - $aktuell==8? J(99999) P(7_Rebecca_schluckt)
+  - $aktuell==9? J(99999) P(8_ihr_duerft)
+  - $aktuell==10? J(99999) P(9_Lara_zieht)
+  - $aktuell==11? J(99999) P(10_die_naechsten)
+  - $aktuell==12? J(99999) P(11_am_Tag)
+  - $aktuell==13? J(99999) P(12_Pass_doch)
+  - $aktuell==14? J(99999) P(13_das_theater)
+  # Abbruch $alles Vorlesen
+  12028:
+  - $akuell:=15
   12001:
   - $seite01==1 ? $seite01:=2 P(0_Wie_Lara)
   - $seite01==2 ? $seite01:=3 P(0_Wie_Lara_2)
@@ -76,3 +113,7 @@ scripts:
   - $seite13==1 ? $seite13:=2 P(13_das_theater)
   - $seite13==2 ? $seite13:=3 P(seite_13_bild)
   - $seite13==3 ? $seite13:=1 P(seite_13)
+  # Bei $alles Abspielen weiter
+  99999:
+  - $aktuell!=14 ? $aktuell+=1 J(10202)
+  - $aktuell>=14 ? $aktuell:=1

@@ -39,31 +39,35 @@ Aufgabe 3 = 503
 Aufgabe 4 = 504
 
 Beschreibung:
-    Seite 1 = 12001
-    Seite 2 = 12002
-    Seite 3 = 12003
-    Seite 4 = 12004
-    Seite 5 = 12005
-    Seite 6 = 12006
-    Seite 7 = 12007
-    Seite 8 = 12008
-    Seite 9 = 12009
-    Seite 10 = 12010
-    Seite 11 = 12011
-    Seite 12 = 12012
-    Seite 13 = 12013
+    12001 = Seite 1
+    12002 = Seite 2
+    12003 = Seite 3
+    12004 = Seite 4
+    12005 = Seite 5
+    12006 = Seite 6
+    12007 = Seite 7
+    12008 = Seite 8
+    12009 = Seite 9 
+    12010 = Seite 10 
+    12011 = Seite 11
+    12012 = Seite 12
+    12013 = Seite 13
 
 Suchaufgaben:
-    Bobbycar finden = 12022
-    Bühnebild finden = 12023
-    Rechenschieber finden = 12024
-    Schwein finden = 12025
-    Skadeboard finden = 12026
-    Bobbycar = 12027
-    Bühnebild = 12015,12016,12017,12018
-    Rechenschieber = 12019
-    Schwein = 12020
-    Skadeboard = 12021
+    12022 = Bobbycar finden
+    12023 = Bühnebild finden
+    12024 = Rechenschieber finden
+    12025 = Schwein finden
+    12026 = Skadeboard finden
+    12027 = Bobbycar
+    12015 = Bühnebild 1
+    12016 = Bühnebild 2
+    12017 = Bühnebild 3
+    12018 = Bühnebild 4
+    12019 = Rechenschieber
+    12020 = Schwein
+    12021 = Skadeboard
     
 Sonstige:
-    Moduswechsel, Zufallsaufgabe = 10208
+    10208 = Moduswechsel[502], Zufallsaufgabe[504], Alle Text durch nacheinander Berühren abspielen[501]
+    10202 = Alle Texte abspielen[501]

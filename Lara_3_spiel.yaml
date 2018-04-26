@@ -67,7 +67,7 @@ scripts:
   - $aufgabe==5? $buehne4!=0? P(schongewaehlt)
   - $aufgabe!=5? P(falsch)
   99999:
-  - $buehne1:=1 $buehne2:=0 $buehne3:=0 $buehne4:=0 $aufgabe:=0
+  - $buehne1:=0 $buehne2:=0 $buehne3:=0 $buehne4:=0 $aufgabe:=0
 
   # behandeln der verwendeten Codes
   10208:

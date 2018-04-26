@@ -1,0 +1,93 @@
+product-id: 505
+welcome: hallo
+
+media-path: "Sounds/Maria/%s"
+gme-lang: GERMAN
+
+init:
+  $maler:=1
+  $bild:=1
+  $kind:=1
+  $maria:=1
+  $petrus:=1
+  $helena:=1
+
+scripts:
+  # Information über den Maler
+  12029:
+  - $maler == 1 ? $maler:=2 P(maler1)
+  - $maler == 2 ? $maler:=3 P(maler2)
+  - $maler == 3 ? $maler:=1 P(maler3)
+
+  # Information über das Bild
+  12030:
+  - $bild == 1 ? $bild:=2 P(bildinfo1)
+  - $bild == 2 ? $bild:=3 P(bildinfo2)
+  - $bild == 3 ? $bild:=4 P(bildinfo3)
+  - $bild == 4 ? $bild:=5 P(bildinfo4)
+  - $bild == 5 ? $bild:=6 P(bildinfo5)
+  - $bild == 6 ? $bild:=1 P(bildinfo6)
+
+  # Information zu Kind
+  12031:
+  - $kind == 1 ? $kind:=2 P(kind1)
+  - $kind == 2 ? $kind:=1 P(kind2)
+
+  # Information zu Maria
+  12032:
+  - $maria == 1 ? $maria:=2 P(maria1)
+  - $maria == 2 ? $maria:=1 P(maria2)
+
+  # Information zu Petrus
+  12033:
+  - $petrus == 1 ? $petrus:= 2 P(petrus1)
+  - $petrus == 2 ? $petrus:= 3 P(petrus2)
+  - $petrus == 3 ? $petrus:= 4 P(petrus3)
+  - $petrus == 4 ? $petrus:= 1 P(petrus4)
+
+  # Information zu Helena
+  12034:
+  - $helena == 1 ? $helena:= 2 P(helena1)
+  - $helena == 2 ? $helena:= 3 P(helena2)
+  - $helena == 3 ? $helena:= 4 P(helena3)
+  - $helena == 4 ? $helena:= 5 P(helena4)
+  - $helena == 5 ? $helena:= 6 P(helena5)
+  - $helena == 6 ? $helena:= 7 P(helena6)
+  - $helena == 7 ? $helena:= 8 P(helena7)
+  - $helena == 8 ? $helena:= 9 P(helena8)
+  - $helena == 9 ? $helena:= 10 P(helena9)
+  - $helena == 10 ? $helena:= 11 P(helena10)
+  - $helena == 11 ? $helena:= 1 P(helena11)
+
+speak:
+- language: de
+  hallo: "willkommen"
+  maler1: "Hersteller: Vincenzo Catena"
+  maler2: "Catena war der Sohn des vermutlich aus Istrien stammenden Biagio Catena. Über seine künstlerischen Anfänge ist nichts bekannt, doch zeigen die frühesten Bilder eine deutliche Nähe zu Antonello da Messina, Cima da Conegliano und Benedetto Diana. Zu seinem eigenen Stil fand er durch seine Auseinandersetzung mit den Werken von Giovanni Bellini und vor allem Giorgione."
+  maler3: "Catena muss schnell zu großem Ansehen gelangt sein, denn schon früh wurde er vom Dogen Leonardo Loredan zu Aufträgen herangezogen. Innerhalb kürzester Zeit wurde er zu einem vielbeschäftigten und vermögenden Mann. Dies ist umso erstaunlicher, als seine Werke im Gegensatz zu jenen seiner Zeitgenossen Giorgione, Tizian, Palma il Vecchio und anderer merkwürdig rückständig blieben und nicht annähernd deren Niveau erreichte. Bereits gegen 1520 listet Marcantonio Michiel, mit dem er anscheinend befreundet war, zahlreiche Werke seiner Hand auf, die sich in verschiedenen Privatsammlungen in Venedig befanden. Neben Madonnen- und Altarbildern war Catena vor allem als Porträtmaler geschätzt. Dies brachte ihm gute Kontakte zu Gelehrten und vor allem dem venezianischen Adel ein. Im Jahre 1528 war er Trauzeuge bei der Hochzeit der Schwester von Sebastiano del Piombo. Am 10. September 1531 änderte er letztmals sein Testament und am 29. September des gleichen Jahres war er bereits verstorben."
+  bildinfo1: "Maria mit dem Kinde zwischen den heiligen Petrus und Helena. um 1505 bis 1510"
+  bildinfo2: "Das Bild zeigt in der mitte Maria, die Mutter Jesu Christi, wie Sie das Jesukind auf einen Sockel aus Mamor, der sich über den ganzen unteren Bildrand erstreckt presentiert. Rechts hinter Maria Ihr steht Helena mit dem Kreuze Christi. Links hinter Maria steht der heilige Petrus in einer Betenden Pose. Im vordergund auf dem Sockel liegt einschlüssel."
+  bildinfo3: "Material und Technik Öl Holz"
+  bildinfo4: "Maße: 84 mal 197 zentimeter"
+  bildinfo5: "Sammlung: Dresden, Staatliche Kunstsammlungen Dresden, Gemäldegalerie Alte Meister, Inventar-Nr. 64a, Dauer: ab 1874"
+  bildinfo6: "Bezugswerk: Nachbildung von Giovanni Bellini 1430"
+  maria1: "Maria auch: Maria von Nazaret ist die im Neuen Testament genannte Mutter des Jesus von Nazaret. Sie lebte mit ihrem Mann Josef und weiteren Angehörigen in der Kleinstadt Nazaret in Galiläa. Maria wird im Christentum als Mutter Jesu Christi besonders verehrt und ist auch im Koran als jungfräuliche Mutter Jesu erwähnt."
+  maria2: "Außerhalb der neutestamentlichen Quellen ist über die Eltern Jesu historisch nichts überliefert, da nach herrschender Meinung der Forschung alle späteren Quellen vom Neuen Testament abhängig sind. Ihre Existenz und die Namen Maria und Josef werden dennoch von der überwiegenden Mehrheit der Historiker als authentisch angesehen."
+  kind1: "Als Jesuskind oder Jesusknabe wird eine Darstellung Jesu Christi bezeichnet, die ihn bis zum Alter von etwa zwölf Jahren abbildet (im Alter von dreizehn Jahren erlangen im Judentum Jungen die Religionsmündigkeit und werden als Erwachsene betrachtet."
+  kind2: "Das Jesuskind ist seit dem 3. Jahrhundert in der christlichen Kunst ein beliebtes Motiv. Häufig zeigen solche Darstellungen die Geburt Christi, die Heilige Familie oder das Jesuskind mit der Gottesmutter. Von der Madonna mit dem Kind gibt es sowohl in der Westkirche als auch in der Ostkirche eine Fülle ikonographischer Darstellungen."
+  petrus1: "Petrus ursprünglicher Name war Simon, Sohn des Jona. Er war ein Fischer aus Galiläa, bevor Jesus ihn und seinen Bruder Andreas, einen Jünger Johannes des Täufers, zu seiner Nachfolge rief. Im Neuen Testament tritt Petrus wiederholt als Sprecher und Anführer der Apostel in Erscheinung."
+  petrus2: "Die Persönlichkeit und die Taten des Petrus zeigen jedoch auch, dass diese Erwählung nicht wegen irgendwelcher Verdienste seinerseits erfolgte, sondern das Werk der unergründlichen Gnade Gottes war. Während Petrus sich nämlich zunächst als treuester Jünger Jesu präsentierte, der für diesen auch zu sterben bereit sei, verleugnete er den Herrn kurz nach dessen Festnahme dreimal, entsprechend der Voraussage Jesu nach dem Evangelisten Matthäus."
+  petrus3: "Durch die vielen Wunder und leidenschaftlichen Predigten, die Petrus im Namen Gottes vollbrachte, kam ihm in der Gemeinde von Jerusalem schon bald eine hohe Stellung zu. Nachdem er in Antiochia und Kleinasien als Missionar gewirkt hatte und dort Gemeinden gegründet hatte, ging er der Legende nach wieder nach Rom."
+  petrus4: "Petrus starb um das Jahr 67 in Rom den Märtyrertod, hingerichtet durch Kaiser Nero nach dem Brand Roms und der darauf folgenden Christenverfolgung. Eingekerkert war er vermutlich im Mamertinischen Kerker in Rom."
+  helena1: "Helena wurde nach überwiegender Meinung 248 bis 250 in Drepanon in der Provinz Bithynien am Bosporus geboren. Sie stammte aus sehr einfachen Verhältnissen. Der Kirchenvater Ambrosius von Mailand schreibt, sie sei eine gute Herbergswirtin gewesen. In der Regel wird eine niedrige Herkunft angenommen, doch besteht auch die Möglichkeit, dass sie aus gehobenen Verhältnissen stammte. Beispielsweise finden sich britische Legenden, die sie als Tochter eines brittanischen Königs namens Coel sehen."
+  helena2: "Sie führte eine Beziehung mit dem römischen Offizier Constantius und brachte zwischen 272 und 280 den gemeinsamen Sohn Konstantin zur Welt. Ob Constantius und Helena auch verheiratet waren, ist umstritten. Die beiden lebten möglicherweise in einem langjährigen Konkubinat. Constantius Chlorus trennte sich 289 von Helena, um Theodora zu heiraten, die Stieftochter des Kaisers Maximian. Er wurde von Maximian adoptiert und 293 im Rahmen der Tetrarchie zum Caesar (Unterkaiser) ernannt."
+  helena3: "Nach dem Tod von Constantius Chlorus übernahm sein Sohn Konstantin das Heer des Vaters und wurde am 25. Juli 306 vom Heer im heutigen York zum Augustus (Oberkaiser) ausgerufen. Nach seinem Regierungsantritt holte er seine Mutter nach Trier."
+  helena4: "Während Constantius Chlorus Heide blieb, ließ Helena sich taufen. Ihr Sohn Konstantin siegte 312 unter dem Banner Jesu Christi gegen seinen Gegner Maxentius in der Schlacht an der Milvischen Brücke und erließ im Jahr darauf das Toleranzedikt von Mailand."
+  helena5: "Nach dem Zeugnis des Bischofs Ambrosius von Mailand und des Eusebius reiste Helena im Alter von vermutlich 76 Jahren nach Palästina. Unterwegs machte sie auch Station auf Zypern, was später in den Bemühungen der dortigen Kirche um Autokephalie eine Rolle spielen sollte."
+  helena6: "In Jerusalem wies Helena um 326 den Bischof Makarios darauf hin, dass der Überlieferung nach unter einem von den Römern im 2. Jahrhundert errichteten Venustempel das Grab Christi liegen müsse. Dieser Tempel war von Kaiser Hadrian nach dem Bar-Kochba-Aufstand errichtet worden, um die Verehrung des Grabes durch die Christen zu beenden, denn schon in den ersten 100 Jahren nach der Kreuzigung Christi waren Golgota (der biblische Ort der Kreuzigung) und das etwa 40 Meter entfernte Grab Stätten der Verehrung für die wachsende Gemeinde der Judenchristen."
+  helena7: "Als Hadrian nach der Niederschlagung des Aufstandes im Jahre 135 über dem zerstörten Jerusalem die Colonia Aelia Capitolina gründete, weihte er die Stadt seiner Lieblingsgöttin Venus und ließ über den frühchristlichen Heiligtümern am Westrand des Forums einen großen Tempel errichten. Eine hohe Terrasse bedeckte das vermutete Heilige Grab und den ganzen Golgotafelsen, auf dem sich nun eine Stele der Göttin erhob. Dieser künstlichen Terrasse ist es zu verdanken, dass die beiden Stätten erhalten blieben."
+  helena8: "Nach der Legende veranlasste Helena Grabungen, bei denen unter anderem Reste des Kreuzes Christi sowie der Ort des Heiligen Grabes gefunden wurden. Helena ließ die aufgefundenen Reste des Kreuzes Christi in drei Teile teilen. Ein Drittel des Kreuzes blieb in Jerusalem, ein Drittel nahm die Kaisermutter mit nach Rom, und ein Drittel sandte sie ihrem Sohn nach Konstantinopel."
+  helena9: "Über dem Grab und der Kreuzauffindungsstelle ließen Helena und ihr Sohn Konstantin eine Basilika errichten, die sogenannte Grabeskirche. Auch die Geburtskirche in Betlehem und die später zerstörte Eleona- (also Helena-)Basilika auf dem Ölberg gehen auf Helena zurück. Zudem ist sie auch Stifterin vieler anderer Kirchenbauten in und um Jerusalem sowie an anderen Orten."
+  helena10: "Helena werden zudem die Auffindung und Mitnahme der Reliquien der Heiligen Drei Könige zugeschrieben. Zunächst waren die Reliquien im Familienbesitz und wurden später an Bischof Eustorgius verschenkt. Sie kamen schließlich nach Mailand, bis sie von Kaiser Friedrich Barbarossa in den Kölner Dom verbracht wurden. Die erhaltenen Gewebe zeigen große Ähnlichkeit mit Vergleichsstücken aus Syrien zur Zeitenwende."
+  helena11: "Als Sterbedatum Helenas werden die Jahre zwischen 329 und 335 angegeben. 329 ist als Todesjahr am wahrscheinlichsten, weil danach keine Münzen mehr mit ihrem Namen geprägt wurden. Sie starb damit vermutlich am 18 August 329 in Nikomedia Izmit. Ihre Beisetzung erfolgte im sogenannten Helenamausoleum im Südosten von Rom. Der Sarkophag aus rotem Porphyr befindet sich heute in den Vatikanischen Museen. Die Kampfszenen zwischen Römern und Germanen auf dem Sarkophag deuten darauf hin, dass der Sarkophag ursprünglich für einen Feldherrn, vielleicht Kaiser Konstantin selbst, bestimmt war."
+
